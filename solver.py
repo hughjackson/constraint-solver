@@ -1,21 +1,21 @@
 import itertools as it
 
-class solver2d:
+class Solver2d:
 	"""Basic constraint solver for 2d grids"""
 	
-	this.legal = None
-	this.values = []
+	legal = None
+	values = []
 	
-	def __init___(self, legal, values):
-		this.legal = legal
-		this.values = values
+	def __init__(self, legal, values):
+		self.legal = legal
+		self.values = values
 	
-	def solve(grid):
+	def solve(self, grid):
 		for x,y in it.product(xrange(len(grid)), xrange(len(grid[0]))):
 			if not grid[x][y]:
 				num_legal = 0
-				for val in values:
-					if legal(val, (x, y)):	
+				for val in self.values:
+					if self.legal(grid, val, (x, y)):	
 						num_legal += 1
 						solution = val
 						
