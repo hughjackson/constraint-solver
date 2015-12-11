@@ -15,7 +15,7 @@ class solver2d:
 			if not grid[x][y]:
 				num_legal = 0
 				for val in values:
-					if legal(val, x, y):	
+					if legal(val, (x, y)):	
 						num_legal += 1
 						solution = val
 						
